@@ -54,7 +54,12 @@ export async function getBrowser(): Promise<Browser> {
     browserInstance = await puppeteer.launch({
       headless: true,
       executablePath,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+      ],
     })
     return browserInstance
   } catch (err) {
