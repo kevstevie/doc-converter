@@ -10,31 +10,46 @@ CLI tool for converting documents between formats.
 
 ---
 
-## Requirements
-
-- Node.js 20+
-- pnpm
-
----
-
 ## Installation
+
+### npm (recommended)
+
+```bash
+npm install -g doc-converter
+```
+
+```bash
+# or with pnpm
+pnpm add -g doc-converter
+
+# or with yarn
+yarn global add doc-converter
+```
+
+After install, the `dcc` command is available globally:
+
+```bash
+dcc --version
+dcc health
+```
+
+> **Note:** PDF conversion requires Chromium (~170MB). It is bundled with puppeteer and downloaded automatically on install. Run `dcc health` to verify it is available.
+
+### From source
 
 ```bash
 git clone <repo-url>
 cd doc-converter
 pnpm install
 pnpm build
-```
-
-### Global install (optional)
-
-```bash
-npm link
-# or
 pnpm link --global
 ```
 
-> **Note:** PDF conversion requires Chromium (~170MB). It is bundled with puppeteer and downloaded automatically on `pnpm install`. Run `dcc health` to verify it is available.
+---
+
+## Requirements
+
+- Node.js 20+
 
 ---
 

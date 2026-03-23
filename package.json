@@ -7,14 +7,33 @@
     "dcc": "./dist/index.js"
   },
   "main": "./dist/index.js",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
+    "prepublishOnly": "pnpm build",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "tsc --noEmit",
     "start": "node dist/index.js"
+  },
+  "keywords": [
+    "cli",
+    "markdown",
+    "html",
+    "pdf",
+    "converter",
+    "document",
+    "puppeteer"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "commander": "^12.1.0",
