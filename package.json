@@ -1,0 +1,37 @@
+{
+  "name": "doc-converter",
+  "version": "0.1.0",
+  "description": "CLI tool for converting documents: MD→HTML, MD→PDF, HTML→PDF",
+  "type": "module",
+  "bin": {
+    "dcc": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "tsc --noEmit",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "highlight.js": "^11.10.0",
+    "marked": "^14.1.4",
+    "marked-highlight": "^2.2.1",
+    "puppeteer": "^23.9.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
